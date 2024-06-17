@@ -12,4 +12,8 @@ The first task today was to simply set up our coding environment and any other n
 - node.js
 - Typescript Compiler
   
-At first I was worried that I might need to use one of the lab's computers, since I am not really familiar with using the linux environment on my chromebook. But as it turns out, it was not as complicated as I expected. Git actually came preinstalled with the linux environment, so that was already taken care of. Visual 
+At first I was worried that I might need to use one of the lab's computers, since I am not really familiar with using the linux environment on my chromebook. But as it turns out, it was not as complicated as I expected. 
+
+Git actually came preinstalled with the linux environment, so that was already taken care of. 
+
+Visual Studio Code was also fairly simple. I simply had to download the correct 
