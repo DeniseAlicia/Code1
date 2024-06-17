@@ -23,6 +23,7 @@ But node.js and typescript proved more difficult then that.
 
 The next task was to familiarize ourselfs with GitHub. That included setting up an account and a personal *Code1*-repository, as well as team repositories with links to every members peronal repos.
 
+
 Visual Studio Code was also fairly simple. I simply had to download the correct package for my hardware (linux, x64) and then install them via a single line in the linux terminal (one google search away).
 
 
