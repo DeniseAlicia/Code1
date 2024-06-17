@@ -22,7 +22,7 @@ Visual Studio Code was also fairly simple. I simply had to download the correct 
 But node.js and typescript proved more difficult then that.
 
 The next task was to familiarize ourselfs with GitHub. That included setting up an account and a personal *Code1*-repository, as well as team repositories with links to every members peronal repos.
-=======
+
 Visual Studio Code was also fairly simple. I simply had to download the correct package for my hardware (linux, x64) and then install them via a single line in the linux terminal (one google search away).
 
 
@@ -36,10 +36,4 @@ After that, we cloned our personal repositories into Visual Studio Code and were
 
 *branch*: a version of the code existing simultaneously with other versions of the code. Can be created and merged
 
-*merge (from)*: combining two branches into one. You always merge **from** the branch you want to disappear **into** the branch you want to keep
-
-*commit*: Commiting changes means applying them not only to the local, but the remote repository as well (for version control systems like Git)
-
-*stage*: staging code means preparing it for committment. Allows for seperate committment of different code sections
-
-*push*: pushing 
+*merge (from)*: combining two branches into one. You always merge **from** the branch you want to disappear **into** the one you want to keep
