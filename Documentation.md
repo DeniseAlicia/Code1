@@ -36,4 +36,10 @@ After that, we cloned our personal repositories into Visual Studio Code and were
 
 *branch*: a version of the code existing simultaneously with other versions of the code. Can be created and merged
 
-*merge (from)*: combining two branches into one. You always merge
+*merge (from)*: combining two branches into one. You always merge **from** the branch you want to disappear **into** the branch you want to keep
+
+*commit*: Commiting changes means applying them not only to the local, but the remote repository as well (for version control systems like Git)
+
+*stage*: staging code means preparing it for committment. Allows for seperate committment of different code sections
+
+*push*: pushing 
