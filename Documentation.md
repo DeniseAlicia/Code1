@@ -19,7 +19,7 @@ Git actually came preinstalled with the linux environment, so that was already t
 
 Visual Studio Code was also fairly simple. I simply had to download the correct package for my hardware (linux, x64) and then install them via a single line in the linux terminal.
 
-But node.js and typescript proved more difficult then that. But after some googeling I found all the solutions I needed to install an up-to-date version of node on my chromebook, which then allowed me to install the typescript Compiler with a line in the terminal (aka the linux way)
+However, node.js and typescript proved more difficult then that. But after some googeling I found all the solutions I needed to install an up-to-date version of node on my chromebook, which then allowed me to install the typescript Compiler with a line in the terminal (aka the linux way)
 
 Next, we had to familiarize ourselfs with GitHub. That included setting up an account as well as a personal *Code1*-Repository (which we are in right now). Additionally, each team had to set up a repository and link their personal repositories within. This taught us a bit about some GitHub basics, like markdown pages, collaborators and why simultaneously working on the same file is complicated (branching).
 
@@ -46,16 +46,16 @@ Today started with more Git! To be precise, we finished some of yersterdays exer
 
 Then moved on to HTML (of course Git is going to stay with us on this journey). After a quick history lesson about HTML and the Internet in general, we learned about the structure of HTML and how <tags> uphold that structure. Example:
 
+```html
 <html>
   <head>
     *stuff*
   </head>
   <body>
-    <tag1
-      /*more, different stuff*
-    tag1/>
+    <tag1 /*attribute/* = /*value/* >  
   </body>
-</html>
+  <html>
+```  
 
 This also allows for a hierarchy of different objects (Document Object Model)
 
@@ -70,7 +70,7 @@ This also allows for a hierarchy of different objects (Document Object Model)
 - A Browser can directly interpret/display a .txt file
 - HTML utilizes tags to organize elements in the code (objects with attributes)
 - different tags serve different purposes and change how the computer interacts with the object
-- the <head> and <body> tags are always a thing
+- the head and body tags are always a thing
 - 
 
 ---
