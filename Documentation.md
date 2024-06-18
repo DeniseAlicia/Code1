@@ -1,5 +1,5 @@
 # What this is about:
-This is a personal learning diary for the module *Code 1* of the GMB course. Each day is going to be doucumented on here, including the actual tasks and how they were solved as well as other noteworthy stuff like problems ore roadblocks encountered along the way.
+This is a personal learning diary for the module *Code 1* of the GMB course. Each day is going to be documented on here, including the actual tasks and how they were solved as well as interesting information I learned in that day and other noteworthy stuff like problems ore roadblocks encountered along the way.
 
 ---
 ## Day 1
@@ -26,7 +26,7 @@ Next, we had to familiarize ourselfs with GitHub. That included setting up an ac
 After that, we cloned our personal repositories into Visual Studio Code and were told to play around with branches, merges and push/pull mechanics. That got us warmed up to some more Git-mechanics. This included:
 
 - What are merging conflicts and how can you deal with them?
--How to utilize a .gitignore file
+- How to utilize a .gitignore file
 
 During this 'testing out' phase, I stumbled upon [this online book](https://git-scm.com/book/en/v2), which helped me immensely with understanding how to do stuff and why I was doing it.
 
