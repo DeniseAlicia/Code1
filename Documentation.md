@@ -21,12 +21,6 @@ Visual Studio Code was also fairly simple. I simply had to download the correct 
 
 But node.js and typescript proved more difficult then that. But after some googeling I found all the solutions I needed to install an up-to-date version of node on my chromebook, which then allowed me to install the typescript Compiler with a line in the terminal (aka the linux way)
 
-The next task was to familiarize ourselfs with GitHub. That included setting up an account and a personal *Code1*-repository, as well as team repositories with links to every members personal repos.
-
-
-Visual Studio Code was also fairly simple. I simply had to download the correct package for my hardware (linux, x64) and then install them via a single line in the linux terminal (one google search away).
-
-
 Next, we had to familiarize ourselfs with GitHub. That included setting up an account as well as a personal *Code1*-Repository (which we are in right now). Additionally, each team had to set up a repository and link their personal repositories within. This taught us a bit about some GitHub basics, like markdown pages, collaborators and why simultaneously working on the same file is complicated (branching).
 
 After that, we cloned our personal repositories into Visual Studio Code and were told to play around with branches, merges and push/pull mechanics. That got us warmed up to some more Git-mechanics. This included:
@@ -38,26 +32,40 @@ During this 'testing out' phase, I stumbled upon [this online book](https://git-
 
 ### What I learned today:
 
-
+- Creating and editing repositories and files in GitHub
+- Cloning said repositories into Visual Studio Code
+- Editing files and commiting changes to finalize them
+- creating and merging branches with Visuall Studio Code
+- Resolving merge conflicts (kinda, I just adjusted the file's content accordingly, hopefully that gets more in-depth later)
 
 
 ## Day 2
 *18.06.2024*
 
-More Git! (Finish from yesterday)
+Today started with more Git! To be precise, we finished some of yersterdays exercises, which meant for me to try out the .gitignore file, where you can point git to files/filetypes it will ignore going forward. 
+
+Then moved on to HTML (of course Git is going to stay with us on this journey). After a quick history lesson about HTML and the Internet in general, 
+
 
 ### What I learned today:
 
--HTML means (HyperText Markup Language) and comes from the first version of the internet
--HTML is a MarkUp-Languuage, meaning that it defines elements through tags
--Through the Web-Developement-Tool in your browser, you can manipulate a websites appearance and contents (temporarily of course)
--A Browser can directly interpret/display a .txt file
+- utilizing a .gitignore file to let git ignore certain files
+- HTML means (HyperText Markup Language) and comes from the first version of the internet
+- HTML is a MarkUp-Languuage, meaning that it defines elements through tags
+- Through the Web-Developement-Tool in your browser, you can manipulate a websites appearance and contents (temporarily of course)
+- A Browser can directly interpret/display a .txt file
+- HTML utilizes tags to organize elements in the code (objects with attributes)
+- different tags serve different purposes and change how the computer interacts with the object
+- the <head> and <body> tags are always a thing
+- 
 
 
 ## **Vocabulary**
 
 *repository*: a storage environment for programmers to store code and other useful stuff. It makes managing projects easier
 
-*branch*: a version of the code existing simultaneously with other versions of the code. Can be created and merged
+*branch*: a version of the code existing simultaneously with other versions of the code. Can be created and merged with other branches 
 
 *merge (from)*: combining two branches into one. You always merge **from** the branch you want to disappear **into** the one you want to keep
+
+*HTML*: Hypertext Mark-up Language
