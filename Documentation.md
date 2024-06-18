@@ -29,8 +29,12 @@ Visual Studio Code was also fairly simple. I simply had to download the correct 
 
 Next, we had to familiarize ourselfs with GitHub. That included setting up an account as well as a personal *Code1*-Repository (which we are in right now). Additionally, each team had to set up a repository and link their personal repositories within. This taught us a bit about some GitHub basics, like markdown pages, collaborators and why simultaneously working on the same file is complicated (branching).
 
-After that, we cloned our personal repositories into Visual Studio Code and were told to play around with branches, merges and push/pull mechanics. That got us warmed up to some of 
+After that, we cloned our personal repositories into Visual Studio Code and were told to play around with branches, merges and push/pull mechanics. That got us warmed up to some more Git-mechanics. This included:
 
+- What are merging conflicts and how can you deal with them?
+-
+
+During this 'testing out' phase, I stumbled upon this 
 ## **Vocabulary**
 
 *repository*: a storage environment for programmers to store code and other useful stuff. It makes managing projects easier
