@@ -36,16 +36,23 @@ After that, we cloned our personal repositories into Visual Studio Code and were
 
 During this 'testing out' phase, I stumbled upon [this online book](https://git-scm.com/book/en/v2), which helped me immensely with understanding how to do stuff and why I was doing it.
 
-###What I learned today:
+### What I learned today:
 
 
 
-##Day 2
+
+## Day 2
 *18.06.2024*
 
 More Git! (Finish from yesterday)
 
-###What I learned today:
+### What I learned today:
+
+-HTML means (HyperText Markup Language) and comes from the first version of the internet
+-HTML is a MarkUp-Languuage, meaning that it defines elements through tags
+-Through the Web-Developement-Tool in your browser, you can manipulate a websites appearance and contents (temporarily of course)
+-A Browser can directly interpret/display a .txt file
+
 
 ## **Vocabulary**
 
