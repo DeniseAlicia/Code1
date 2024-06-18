@@ -33,6 +33,7 @@ During this 'testing out' phase, I stumbled upon [this online book](https://git-
 ### What I learned today:
 
 - Creating and editing repositories and files in GitHub
+- Basics of Markdown (kinda like LaTex, lets you format the text via commands/symbols directly instead of a program doing it for you)
 - Cloning said repositories into Visual Studio Code
 - Editing files and commiting changes to finalize them
 - creating and merging branches with Visuall Studio Code
@@ -52,12 +53,15 @@ Then moved on to HTML (of course Git is going to stay with us on this journey). 
     *stuff*
   </head>
   <body>
-    <tag1 /*attribute/* = /*value/* >  
+    <tag1 attributeA = "valueA" attributeB = "valueB" >
+    <tag2 attributeC = "valueC" attributeD = "valueD" >
   </body>
   <html>
 ```  
 
 This also allows for a hierarchy of different objects (Document Object Model)
+
+After that, it was playground-time. Meaning that we got to try out the knowledge for ourselves by creating our own pages and manipulating existing ones.
 
 
 
