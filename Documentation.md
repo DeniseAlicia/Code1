@@ -32,8 +32,8 @@ During this 'testing out' phase, I stumbled upon [this online book](https://git-
 
 ### What I learned today:
 
-- Creating and editing repositories and files in GitHub
 - Basics of Markdown (kinda like LaTex, lets you format the text via commands/symbols directly instead of a program doing it for you)
+- Creating and editing repositories and files in GitHub
 - Cloning said repositories into Visual Studio Code
 - Editing files and commiting changes to finalize them
 - creating and merging branches with Visuall Studio Code
@@ -45,7 +45,7 @@ During this 'testing out' phase, I stumbled upon [this online book](https://git-
 
 Today started with more Git! To be precise, we finished some of yersterdays exercises, which meant for me to try out the .gitignore file, where you can point git to files/filetypes it will ignore going forward. 
 
-Then moved on to HTML (of course Git is going to stay with us on this journey). After a quick history lesson about HTML and the Internet in general, we learned about the structure of HTML and how <tags> uphold that structure. Example:
+Then moved on to HTML (of course Git is going to stay with us on this journey). After a quick history lesson about HTML and the Internet in general, we learned about the structure of HTML and how tags uphold that structure. Example:
 
 ```html
 <html>
