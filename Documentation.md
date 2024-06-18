@@ -21,7 +21,7 @@ Visual Studio Code was also fairly simple. I simply had to download the correct 
 
 But node.js and typescript proved more difficult then that.
 
-The next task was to familiarize ourselfs with GitHub. That included setting up an account and a personal *Code1*-repository, as well as team repositories with links to every members peronal repos.
+The next task was to familiarize ourselfs with GitHub. That included setting up an account and a personal *Code1*-repository, as well as team repositories with links to every members personal repos.
 
 
 Visual Studio Code was also fairly simple. I simply had to download the correct package for my hardware (linux, x64) and then install them via a single line in the linux terminal (one google search away).
@@ -34,7 +34,8 @@ After that, we cloned our personal repositories into Visual Studio Code and were
 - What are merging conflicts and how can you deal with them?
 -
 
-During this 'testing out' phase, I stumbled upon this 
+During this 'testing out' phase, I stumbled upon [this online book](https://git-scm.com/book/en/v2), which helped me immensely with understanding how to do stuff and why I was doing it.
+
 ## **Vocabulary**
 
 *repository*: a storage environment for programmers to store code and other useful stuff. It makes managing projects easier
