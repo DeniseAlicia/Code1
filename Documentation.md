@@ -44,7 +44,21 @@ During this 'testing out' phase, I stumbled upon [this online book](https://git-
 
 Today started with more Git! To be precise, we finished some of yersterdays exercises, which meant for me to try out the .gitignore file, where you can point git to files/filetypes it will ignore going forward. 
 
-Then moved on to HTML (of course Git is going to stay with us on this journey). After a quick history lesson about HTML and the Internet in general, 
+Then moved on to HTML (of course Git is going to stay with us on this journey). After a quick history lesson about HTML and the Internet in general, we learned about the structure of HTML and how <tags> uphold that structure. Example:
+
+<html>
+  <head>
+    *stuff*
+  </head>
+  <body>
+    <tag1
+      /*more, different stuff*
+    tag1/>
+  </body>
+</html>
+
+This also allows for a hierarchy of different objects (Document Object Model)
+
 
 
 ### What I learned today:
@@ -69,3 +83,7 @@ Then moved on to HTML (of course Git is going to stay with us on this journey). 
 *merge (from)*: combining two branches into one. You always merge **from** the branch you want to disappear **into** the one you want to keep
 
 *HTML*: Hypertext Mark-up Language
+
+*Sytax*: the structure and rules of a language (=Grammar)
+
+*Semantic*: The interpretation/meaning of words and sentences in a language (=Vocabulary)
