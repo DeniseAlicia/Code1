@@ -1,7 +1,7 @@
 # What this is about:
 This is a personal learning diary for the module *Code 1* of the GMB course. Each day is going to be doucumented on here, including the actual tasks and how they were solved as well as other noteworthy stuff like problems ore roadblocks encountered along the way.
 
-
+---
 ## Day 1
 *17.06.2024*
 
@@ -38,7 +38,7 @@ During this 'testing out' phase, I stumbled upon [this online book](https://git-
 - creating and merging branches with Visuall Studio Code
 - Resolving merge conflicts (kinda, I just adjusted the file's content accordingly, hopefully that gets more in-depth later)
 
-
+---
 ## Day 2
 *18.06.2024*
 
@@ -59,7 +59,7 @@ Then moved on to HTML (of course Git is going to stay with us on this journey). 
 - the <head> and <body> tags are always a thing
 - 
 
-
+---
 ## **Vocabulary**
 
 *repository*: a storage environment for programmers to store code and other useful stuff. It makes managing projects easier
