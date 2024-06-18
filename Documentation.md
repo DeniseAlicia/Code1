@@ -19,7 +19,7 @@ Git actually came preinstalled with the linux environment, so that was already t
 
 Visual Studio Code was also fairly simple. I simply had to download the correct package for my hardware (linux, x64) and then install them via a single line in the linux terminal.
 
-But node.js and typescript proved more difficult then that.
+But node.js and typescript proved more difficult then that. But after some googeling I found all the solutions I needed to install an up-to-date version of node on my chromebook, which then allowed me to install the typescript Compiler with a line in the terminal (aka the linux way)
 
 The next task was to familiarize ourselfs with GitHub. That included setting up an account and a personal *Code1*-repository, as well as team repositories with links to every members personal repos.
 
@@ -32,9 +32,20 @@ Next, we had to familiarize ourselfs with GitHub. That included setting up an ac
 After that, we cloned our personal repositories into Visual Studio Code and were told to play around with branches, merges and push/pull mechanics. That got us warmed up to some more Git-mechanics. This included:
 
 - What are merging conflicts and how can you deal with them?
--
+-How to utilize a .gitignore file
 
 During this 'testing out' phase, I stumbled upon [this online book](https://git-scm.com/book/en/v2), which helped me immensely with understanding how to do stuff and why I was doing it.
+
+###What I learned today:
+
+
+
+##Day 2
+*18.06.2024*
+
+More Git! (Finish from yesterday)
+
+###What I learned today:
 
 ## **Vocabulary**
 
