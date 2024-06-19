@@ -1,0 +1,17 @@
+#Person{
+    color: green;
+}
+
+#Object{
+    color: purple;
+}
+
+div{
+    color:dimgray;
+    display: inl;
+}
+ button{
+    color: blueviolet;
+    background-color: yellow;
+    border-color: red;
+ }

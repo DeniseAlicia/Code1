@@ -63,7 +63,7 @@ This also allows for a hierarchy of different objects (Document Object Model)
 
 After that, it was playground-time. Meaning that we got to try out the knowledge for ourselves by creating our own pages and manipulating existing ones. The results of that can be found on [my GitHub page](index.html).
 
-Speaking of, that was the next thing we did. We activated
+Speaking of, that was the next thing we did. We activated the page feature in GitHUb and, with some very simple .html-files, created our first web
 
 
 
@@ -84,12 +84,17 @@ Speaking of, that was the next thing we did. We activated
 ## Day 3
 *19.06.2024*
 
-Today started with every group making a little branching story 
+Today started with every group making a little branching story using hyperlinks and .html-files. It was fun exercise that cemented some of the lessons from yesterday.
+
+After a little playtest of all the games, we started with CSS. If HTML is all about the content, semantics and format of a webpage, CSS is about style & presentation. While a browser automatically generates a (very simple) stylesheet
+
 ### What I learned today
 - what css is/does in browsers
 - css works bei dividing all the page elements into boxes
 - css not only does colours, but also font, lines, spaces between elements, etc..
-- 
+- css is cascading, meaning properties are inherited by children unless they are seperatly defined
+- css has many different seperators to define which elements to style (for a playful demonstration, [try this](https://flukeout.github.io/))
+- with flex containers, css can align items within proportional to the container and its alignements
 
 ---
 ## **Vocabulary**
@@ -105,3 +110,7 @@ Today started with every group making a little branching story
 *Sytax*: the structure and rules of a language (=Grammar)
 
 *Semantic*: The interpretation/meaning of words and sentences in a language (=Vocabulary)
+
+*CSS*: Cascading Style Sheet
+
+*Selector (css)*: Defines which elements from the html-file to choose for styling
