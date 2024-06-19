@@ -63,7 +63,7 @@ This also allows for a hierarchy of different objects (Document Object Model)
 
 After that, it was playground-time. Meaning that we got to try out the knowledge for ourselves by creating our own pages and manipulating existing ones. The results of that can be found on [my GitHub page](index.html).
 
-Speaking of, that was the next thing we did. We activated the page feature in GitHUb and, with some very simple .html-files, created our first web
+Speaking of, that was the next thing we did. We activated the page feature in GitHUb and, with some very simple .html-files, created our first web page (as seen above)
 
 
 
@@ -79,6 +79,7 @@ Speaking of, that was the next thing we did. We activated the page feature in Gi
 - the head and body tags are always a thing
 - html basics (how to use tags)
 - creating webpages as html documents
+- hyperlinking html files together
 
 ---
 ## Day 3
@@ -86,7 +87,18 @@ Speaking of, that was the next thing we did. We activated the page feature in Gi
 
 Today started with every group making a little branching story using hyperlinks and .html-files. It was fun exercise that cemented some of the lessons from yesterday.
 
-After a little playtest of all the games, we started with CSS. If HTML is all about the content, semantics and format of a webpage, CSS is about style & presentation. While a browser automatically generates a (very simple) stylesheet
+After a little playtest of all the games, we started with CSS. If HTML is all about the content, semantics and format of a webpage, CSS is about style & presentation. While a browser automatically generates a (very simple) stylesheet for your .html-file, linking your own css-stylesheet to that file not only looks better (at least more interesting), but allows for a lot more control over the design of the page.
+
+A demonstration of how that works can be found in this [Demo](Projects/MicroProjects/CSSPlayground/CSSTesting.html)
+
+Some css-selectors:
+
+A {}  - selects all elements with the A-tag
+.A{}  - selects all element of class A
+#A{}  - selects all elements with id A
+A:B{} - selects all B elements that are children of A elements
+
+
 
 ### What I learned today
 - what css is/does in browsers
