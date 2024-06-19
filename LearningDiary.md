@@ -61,7 +61,9 @@ Then moved on to HTML (of course Git is going to stay with us on this journey). 
 
 This also allows for a hierarchy of different objects (Document Object Model)
 
-After that, it was playground-time. Meaning that we got to try out the knowledge for ourselves by creating our own pages and manipulating existing ones.
+After that, it was playground-time. Meaning that we got to try out the knowledge for ourselves by creating our own pages and manipulating existing ones. The results of that can be found on [my GitHub page](index.html).
+
+Speaking of, that was the next thing we did.
 
 
 
@@ -75,7 +77,14 @@ After that, it was playground-time. Meaning that we got to try out the knowledge
 - HTML utilizes tags to organize elements in the code (objects with attributes)
 - different tags serve different purposes and change how the computer interacts with the object
 - the head and body tags are always a thing
-- 
+- html basics (how to use tags)
+- creating webpages as html documents
+
+---
+## Day 3
+*19.06.2024*
+
+### What I learned today
 
 ---
 ## **Vocabulary**
