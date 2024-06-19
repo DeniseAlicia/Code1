@@ -93,10 +93,10 @@ A demonstration of how that works can be found in this [Demo](Projects/MicroProj
 
 Some css-selectors:
 
-A {}  - selects all elements with the A-tag
-.A{}  - selects all element of class A
-#A{}  - selects all elements with id A
-A:B{} - selects all B elements that are children of A elements
+A {}  - selects all elements with the A-tag <br>
+.A{}  - selects all element of class A <br>
+#A{}  - selects all elements with id A <br>
+A:B{} - selects all B elements that are children of A elements <br>
 
 
 
