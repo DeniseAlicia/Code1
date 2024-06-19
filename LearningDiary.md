@@ -91,13 +91,15 @@ After a little playtest of all the games, we started with CSS. If HTML is all ab
 
 A demonstration of how that works can be found in this [Demo](Projects/MicroProjects/CSSPlayground/CSSTesting.html)
 
-Some css-selectors:
+Some css-selector (They can be combined at will):
 
-A {}  - selects all elements with the A-tag <br>
-.A{}  - selects all element of class A <br>
-#A{}  - selects all elements with id A <br>
-A:B{} - selects all B elements that are children of A elements <br>
-
+A {}             - selects all elements with the A-tag <br>
+.A{}             - selects all element of class A <br>
+#A{}             - selects all elements with id A <br>
+A:B{}            - selects all B elements that are children of A elements <br>
+[A = "value"]    - selects all elements with attribute A (value can be left blank)
+[A$ = "ue"]
+[A^ = "va"]
 
 
 ### What I learned today
