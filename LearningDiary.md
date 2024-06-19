@@ -63,7 +63,7 @@ This also allows for a hierarchy of different objects (Document Object Model)
 
 After that, it was playground-time. Meaning that we got to try out the knowledge for ourselves by creating our own pages and manipulating existing ones. The results of that can be found on [my GitHub page](index.html).
 
-Speaking of, that was the next thing we did.
+Speaking of, that was the next thing we did. We activated
 
 
 
@@ -84,7 +84,12 @@ Speaking of, that was the next thing we did.
 ## Day 3
 *19.06.2024*
 
+Today started with every group making a little branching story 
 ### What I learned today
+- what css is/does in browsers
+- css works bei dividing all the page elements into boxes
+- css not only does colours, but also font, lines, spaces between elements, etc..
+- 
 
 ---
 ## **Vocabulary**
