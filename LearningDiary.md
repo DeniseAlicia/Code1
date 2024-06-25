@@ -113,7 +113,7 @@ A:B{}            - selects all B elements that are children of A elements <br>
 - css not only does colours, but also font, lines, spaces between elements, etc..
 - css is cascading, meaning properties are inherited by children unless they are seperatly defined
 - css has many different seperators to define which elements to style (for a playful demonstration, [try this](https://flukeout.github.io/))
-- with flex containers, css can align items within proportional to the container and its alignements
+- with flex containers, css can align items within proportional to the container and its alignments
 
 ---
 ## Day 4 - Typescript
@@ -123,13 +123,26 @@ Typescript is essentially a better version of Javascript, that compiles into Jav
 
 You can link scripts to your html-pages to change properties like texts and colors, as well as handle interactions with the page, like clicking on something. Those are called **events**.
 
-For events to be called, an element needs an **EventListener**. Those check for events they are assigned to and can call the appropiate function for the event.
-
-'''typescript
+For events to be called, an element needs an **EventListener**. Those check for events they are assigned to and can call the appropiate function for the event:
 
 element.addEventListener("eventtype", eventFunction)
 
-'''
+
+Some examples for event types are:
+
+*PointerEvent* - 
+*KeyboardEvent*
+*DragEvent*
+*ClipboardEvent*
+
+
+
+
+Events are divided into 3 different **phases**. Each phase describes a different stage of the process of calling an event:
+
+- capture phase: the event travels down the DOM-Tree until it reaches an appropiate event listener
+- target phase: the event reaches its target
+- bubbling phase: the event travels back up the DOM-tree
 
 
 
@@ -150,5 +163,7 @@ element.addEventListener("eventtype", eventFunction)
 *CSS*: Cascading Style Sheet
 
 *Selector (css)*: Defines which elements from the html-file to choose for styling
+
+*DOM*: Document Object Model - Hierachy of Elements
 
 
