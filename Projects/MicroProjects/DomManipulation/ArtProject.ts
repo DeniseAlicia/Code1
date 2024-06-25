@@ -3,11 +3,11 @@ console.log("Hello There");
 let i: number = 0;
 let iLimit: number = Math.floor(Math.random()*50 + 5); //generate and round number between 20 and 0, then add 5
 
-let randomWords = ["Discovery", "Discovery", "Fullfilment", "Happiness", "Joy", "Balance"];
-let randomColor = ["red", "red", "blue", "green", "pink", "purple", "orange", "yellow"]
+let randomWords = ["Discovery", "Fullfilment", "Happiness", "Joy", "Balance"];
+let randomColor = ["red", "blue", "green", "pink", "purple", "orange", "yellow"];
 
 
-//creating the random words
+//creating the random words (if more complex, e.g. adding shapes, break up into functions)
 do{
     i++;
     let newWord: HTMLSpanElement = document.createElement("span");
