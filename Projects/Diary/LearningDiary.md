@@ -156,7 +156,7 @@ Events are divided into 3 different **phases**. Each phase describes a different
 
 *HTML*: Hypertext Mark-up Language
 
-*Sytax*: the structure and rules of a language (=Grammar)
+*Syntax*: the structure and rules of a language (=Grammar)
 
 *Semantic*: The interpretation/meaning of words and sentences in a language (=Vocabulary)
 
