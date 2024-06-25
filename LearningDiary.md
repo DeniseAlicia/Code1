@@ -2,7 +2,7 @@
 This is a personal learning diary for the module *Code 1* of the GMB course. Each day is going to be documented on here, including the actual tasks and how they were solved as well as interesting information I learned in that day and other noteworthy stuff like problems ore roadblocks encountered along the way.
 
 ---
-## Day 1
+## Day 1 - Getting Started
 *17.06.2024*
 
 The first task today was to simply set up our coding environment and any other necessary software packages for this course. This entailed:
@@ -41,7 +41,7 @@ During this 'testing out' phase, I stumbled upon [this online book](https://git-
 - Resolving merge conflicts (kinda, I just adjusted the file's content accordingly, hopefully that gets more in-depth later)
 
 ---
-## Day 2
+## Day 2 - HTML
 *18.06.2024*
 
 Today started with more Git! To be precise, we finished some of yersterdays exercises, which meant for me to try out the .gitignore file, where you can point git to files/filetypes it will ignore going forward. 
@@ -83,16 +83,20 @@ Speaking of, that was the next thing we did. We activated the page feature in Gi
 - hyperlinking html files together
 
 ---
-## Day 3
+## Day 3 - CSS
 *19.06.2024*
 
 Today started with every group making a little branching story using hyperlinks and .html-files. It was fun exercise that cemented some of the lessons from yesterday.
 
 After a little playtest of all the games, we started with CSS. If HTML is all about the content, semantics and format of a webpage, CSS is about style & presentation. While a browser automatically generates a (very simple) stylesheet for your .html-file, linking your own css-stylesheet to that file not only looks better (at least more interesting), but allows for a lot more control over the design of the page.
 
+Some examples of what css can do:
+
+
+
 A demonstration of how that works can be found in this [Demo](Projects/MicroProjects/CSSPlayground/CSSTesting.html)
 
-Some css-selector (They can be combined at will):
+Some css-selectors (They can be combined at will):
 
 A {}             - selects all elements with the A-tag <br>
 .A{}             - selects all element of class A <br>
@@ -112,11 +116,23 @@ A:B{}            - selects all B elements that are children of A elements <br>
 - with flex containers, css can align items within proportional to the container and its alignements
 
 ---
-## Day 4
+## Day 4 - Typescript
 *25.06.2024*
 
-### What I learned today
-- 
+Typescript is essentially a better version of Javascript, that compiles into Javascript. It allows for more strict type management, for example. This means that you have to be more specific with defining your variables, but also reduces the chance of errors due to conflicting types.
+
+You can link scripts to your html-pages to change properties like texts and colors, as well as handle interactions with the page, like clicking on something. Those are called **events**.
+
+For events to be called, an element needs an **EventListener**. Those check for events they are assigned to and can call the appropiate function for the event.
+
+'''typescript
+
+element.addEventListener("eventtype", eventFunction)
+
+'''
+
+
+
 ## **Vocabulary**
 
 *repository*: a storage environment for programmers to store code and other useful stuff. It makes managing projects easier

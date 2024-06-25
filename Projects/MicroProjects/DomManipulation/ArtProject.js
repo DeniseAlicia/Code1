@@ -1,10 +1,10 @@
 "use strict";
 console.log("Hello There");
 let i = 0;
-let iLimit = Math.floor(Math.random() * 50 + 5); //generate and round number between 20 and 0, then add 5
-let randomWords = ["Discovery", "Discovery", "Fullfilment", "Happiness", "Joy", "Balance"];
-let randomColor = ["red", "red", "blue", "green", "pink", "purple", "orange", "yellow"];
-//creating the random words
+let iLimit = Math.floor(Math.random() * 200 + 10);
+let randomWords = ["Discovery", "Fullfilment", "Happiness", "Joy", "Balance"];
+let randomColor = ["blue", "green", "pink", "purple", "orange", "yellow"];
+//creating the random words (if more complex, e.g. adding shapes, break up into functions)
 do {
     i++;
     let newWord = document.createElement("span");
@@ -14,17 +14,26 @@ do {
     //generate random font size between 0 and 150, then add 20
     let fontSize = String(Math.floor(Math.random() * 150 + 20)) + "px"; //px as unit for css
     newWord.style.fontSize = fontSize;
-    console.log(fontSize);
     //chooses and applies random color to the text
     let colorIndex = Math.floor(Math.random() * randomColor.length);
     let color = randomColor[colorIndex];
     newWord.style.color = color;
     console.log(color);
-    //positions the word randomly on the page
-    let positionLeft = String(Math.floor(Math.random() * 5)) + "px"; //px as unit for css
-    let positionTop = String(Math.floor(Math.random() * 500)) + "px";
+    //positions the word
+    let positionX = String(Math.floor(Math.random() * innerHeight)) + "px"; //px as unit for css
+    let positionY = String(Math.floor(Math.random() * innerWidth)) + "px";
     newWord.style.position = "relative";
-    newWord.style.left = positionLeft;
-    newWord.style.top = positionTop;
+    newWord.style.top = positionX;
+    newWord.style.left = positionY;
+    newWord.addEventListener("click", hndClick);
     document.body.appendChild(newWord);
 } while (i < iLimit);
+document.body.addEventListener("click", hndClick);
+function hndClick(_event) {
+    let target = _event.currentTarget;
+    if (target == document.body)
+        return;
+    target.textContent = "Ouch!";
+    target.style.backgroundColor = "red";
+}
+;
