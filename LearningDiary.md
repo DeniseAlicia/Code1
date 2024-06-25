@@ -32,6 +32,7 @@ During this 'testing out' phase, I stumbled upon [this online book](https://git-
 
 ### What I learned today:
 
+- "sudo" in the Linux Terminal means "SuperUser
 - Basics of Markdown (kinda like LaTex, lets you format the text via commands/symbols directly instead of a program doing it for you)
 - Creating and editing repositories and files in GitHub
 - Cloning said repositories into Visual Studio Code
@@ -98,8 +99,8 @@ A {}             - selects all elements with the A-tag <br>
 #A{}             - selects all elements with id A <br>
 A:B{}            - selects all B elements that are children of A elements <br>
 [A = "value"]    - selects all elements with attribute A (value can be left blank)
-[A$ = "ue"]
-[A^ = "va"]
+[A$ = "ue"]      - selects all elements whose value ends with "ue"
+[A^ = "va"]      - selects all elements whose value begins with "va"
 
 
 ### What I learned today
@@ -111,6 +112,11 @@ A:B{}            - selects all B elements that are children of A elements <br>
 - with flex containers, css can align items within proportional to the container and its alignements
 
 ---
+## Day 4
+*25.06.2024*
+
+### What I learned today
+- 
 ## **Vocabulary**
 
 *repository*: a storage environment for programmers to store code and other useful stuff. It makes managing projects easier
@@ -128,3 +134,5 @@ A:B{}            - selects all B elements that are children of A elements <br>
 *CSS*: Cascading Style Sheet
 
 *Selector (css)*: Defines which elements from the html-file to choose for styling
+
+
