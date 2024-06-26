@@ -1,4 +1,3 @@
-
 /* */
 body {
   padding-left: 20px;
@@ -16,39 +15,53 @@ body {
 }
 
 /*table borders*/
-table, th, td {
-    border-bottom: 2px solid black;
-    border-collapse: collapse;
-  }
+table,
+th,
+td {
+  border-bottom: 2px solid black;
+  border-collapse: collapse;
+}
 
-  /*space around the tables*/
-  table {
-    margin: 30px;
-  }
+/*space around the tables*/
+table {
+  margin: 30px;
+}
 
 /*text style of the page*/
 .text {
-  font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif ;
+  font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
   font-size: 20px;
 }
 
-/*style */
-h1, h2 {
-  font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+/*style of all headlines */
+h1,
+h2 {
+  font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
   text-align: center;
 
   padding: 18px;
   width: 100%;
   height: 50px;
- 
- 
+
+
 }
 
-/* Rounded boxes around the headlines*/
+/* Rounded boxes around the small headlines*/
 h2 {
   background-color: #B758E0;
 
   border-color: #3F0E54;
   border: 3px solid;
   border-radius: 20px;
+}
+
+section#fullday {
+  background-color: #CCF5F7;
+
+  border-color: #3F0E54;
+  border: 3px solid;
+  border-radius: 20px;
+
+  padding: 18px;
+
 }
