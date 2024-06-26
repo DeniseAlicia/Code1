@@ -1,6 +1,6 @@
 "use strict";
 console.log("Hello There");
-let chosenCharacter;
+let chosenCharacter = "A";
 window.addEventListener("load", handleLoad);
 function handleLoad(_event) {
     let mail = document.querySelector("div#mail");
@@ -17,8 +17,14 @@ function placeLetter(_event) {
     letter.textContent = chosenCharacter;
     letter.style.left = x + "px";
     letter.style.top = y + "px";
+    letter.addEventListener("click", deleteLetter);
 }
 function chooseCharacter(_event) {
     //console.log(_event);
     chosenCharacter = _event.key;
+}
+function deleteLetter(_event) {
+    let target = _event.target;
+    let parent = target.parentElement;
+    parent.removeChild(target);
 }

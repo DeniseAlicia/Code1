@@ -1,6 +1,6 @@
 console.log("Hello There");
 
-let chosenCharacter: string;
+let chosenCharacter: string = "A";
 window.addEventListener("load", handleLoad);
 
 function handleLoad(_event: Event): void{
@@ -22,9 +22,18 @@ function placeLetter(_event: MouseEvent): void {
     letter.style.left = x + "px";
     letter.style.top = y + "px";
 
+    letter.addEventListener("click", deleteLetter);
+
 }
 
 function chooseCharacter(_event: KeyboardEvent): void {
     //console.log(_event);
     chosenCharacter = _event.key;
+}
+
+function deleteLetter(_event: MouseEvent): void {
+    let target: Node = <Node>_event.target;
+    let parent: Node = <Node>target.parentElement;
+    parent.removeChild(target);
+
 }

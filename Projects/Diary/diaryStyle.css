@@ -55,7 +55,7 @@ h2 {
   border-radius: 20px;
 }
 
-section#fullday {
+section.fullday {
   background-color: #CCF5F7;
 
   border-color: #3F0E54;
@@ -63,5 +63,6 @@ section#fullday {
   border-radius: 20px;
 
   padding: 18px;
+  padding-right:
 
 }

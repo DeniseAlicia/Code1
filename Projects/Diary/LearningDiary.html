@@ -4,7 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Learning Diary</title>
     <link rel="stylesheet" href="diaryStyle.css">
 
 </head>
@@ -22,7 +22,7 @@
         <i> 17.06.2024 </i>
     </h2>
 
-    <section id="fullday">
+    <section class="fullday">
         <p class="text"> The first thing is, of course, to set up your coding environment. For that, the following
             software
             is needed:</p>
@@ -57,102 +57,115 @@
         vscode:change symbol, autosave, format document
 
     </section>
+
     <h2>
         <strong> Day 2 - HTML </strong> <br>
         <i> 18.06.2024 </i>
     </h2>
 
-    <p class="text">
-        index files are automatically called when directory is selected
-    </p>
-
+    <section class="fullday">
+        <p class="text">
+            index files are automatically called when directory is selected
+        </p>
+    </section>
+    
     <h2>
         <strong> Day 3 - CSS </strong> <br>
         <i> 19.06.2024 </i>
     </h2>
+
+    <section class="fullday">
+
+    </section>
 
     <h2>
         <strong> Day 4 - Typescript</strong> <br>
         <i> 25.06.2024 </i>
     </h2>
 
-    <p class="text"> Typescript is essentially a better version of Javascript, that compiles into Javascript.
-        It allows for more strict type management, for example. This means that you have to be more specific
-        with defining your variables, but also reduces the chance of errors due to conflicting data types. A typescript
-        file is compiled into a javascript file, which then can be linked to a html webpage.</p>
+    <section class="fullday">
+        <p class="text"> Typescript is essentially a better version of Javascript, that compiles into Javascript.
+            It allows for more strict type management, for example. This means that you have to be more specific
+            with defining your variables, but also reduces the chance of errors due to conflicting data types. A
+            typescript
+            file is compiled into a javascript file, which then can be linked to a html webpage.</p>
 
-    <p class="text"> Linked scripts can change properties of your html page lik texts and color or creating objects and
-        edit
-        existing ones essentially allowing for <b>DOM-Manipulation</b> outside of the html-file.
-    </p>
+        <p class="text"> Linked scripts can change properties of your html page lik texts and color or creating objects
+            and
+            edit
+            existing ones essentially allowing for <b>DOM-Manipulation</b> outside of the html-file.
+        </p>
 
-    <p class="text"> Scripts also handle interactions with the page, like clicking on something. These interactions are
-        called
-        <b>events</b>.
-    </p>
+        <p class="text"> Scripts also handle interactions with the page, like clicking on something. These interactions
+            are
+            called
+            <b>events</b>.
+        </p>
 
-    <p class="text"> For events to be called, an element needs an <b> Event Listener</b>
-        (element.addEventListener("eventType",
-        handlerFunction)).
-        Those check for events they are assigned to and can call the appropiate function handling the event.
-        Some examples of event types are:</p>
+        <p class="text"> For events to be called, an element needs an <b> Event Listener</b>
+            (element.addEventListener("eventType",
+            handlerFunction)).
+            Those check for events they are assigned to and can call the appropiate function handling the event.
+            Some examples of event types are:</p>
 
-    <table class="text" style="width:50%">
-        <tr>
-            <th> Event Type</th>
-            <th> Description</th>
-        </tr>
-        <tr>
-            <td> PointerEvent</td>
-            <td> Interactions with mouse/touchscreen/stylus, e.g. clicking.</td>
-        </tr>
-        <tr>
-            <td> KeyboardEvent </td>
-            <td> Interactions with the keyboard, like single button presses</td>
-        </tr>
-        <tr>
-            <td> WheelEvent</td>
-            <td> Interactions with the mouse wheel</td>
-        </tr>
-        <tr>
-            <td>FocusEvent</td>
-            <td>Occurs when elements lose or gain focus, by switching tabs for example</td>
-        </tr>
-        <tr>
-            <td>InvalidEvent</td>
-            <td>Happens when an input is invalid</td>
-        </tr>
-        <tr>
-            <td>DragEvent</td>
-            <td>When an element is dragged around with a pointer</td>
-        </tr>
-        <tr>
-            <td>FormEvent</td>
-            <td></td>
-        </tr>
-        <tr>
-            <td></td>
-            <td></td>
-        </tr>
+        <table class="text" style="width:50%">
+            <tr>
+                <th> Event Type</th>
+                <th> Description</th>
+            </tr>
+            <tr>
+                <td> PointerEvent</td>
+                <td> Interactions with mouse/touchscreen/stylus, e.g. clicking.</td>
+            </tr>
+            <tr>
+                <td> KeyboardEvent </td>
+                <td> Interactions with the keyboard, like single button presses</td>
+            </tr>
+            <tr>
+                <td> WheelEvent</td>
+                <td> Interactions with the mouse wheel</td>
+            </tr>
+            <tr>
+                <td>FocusEvent</td>
+                <td>Occurs when elements lose or gain focus, by switching tabs for example</td>
+            </tr>
+            <tr>
+                <td>InvalidEvent</td>
+                <td>Happens when an input is invalid</td>
+            </tr>
+            <tr>
+                <td>DragEvent</td>
+                <td>When an element is dragged around with a pointer</td>
+            </tr>
+            <tr>
+                <td>FormEvent</td>
+                <td></td>
+            </tr>
+            <tr>
+                <td></td>
+                <td></td>
+            </tr>
 
-    </table>
+        </table>
 
-    <p class="text"> The process of triggering an event is divided into 3 seperate phases:</p>
+        <p class="text"> The process of triggering an event is divided into 3 seperate phases:</p>
 
-    <ul class="text">
-        <li><b> capture phase: </b></li>
-        <li><b> target phase:</b></li>
-        <li><b> bubbling phase:</b></li>
-    </ul>
+        <ul class="text">
+            <li><b> capture phase: </b></li>
+            <li><b> target phase:</b></li>
+            <li><b> bubbling phase:</b></li>
+        </ul>
 
-    <h2>
-        <strong> Day 5 - Conception of Applications </strong> <br>
-        <i> 26.06.2024 </i>
-    </h2>
+        <h2>
+            <strong> Day 5 - Conception of Applications </strong> <br>
+            <i> 26.06.2024 </i>
+        </h2>
 
-    <p class="text">
-        Once you are ready to develop more complex web applications, you need a plan before starting to code.
-    </p>
+        <p class="text">
+            Once you are ready to develop more complex web applications, you need a plan before starting to code.
+        </p>
+
+    </section>
 
     <h2><strong> Vocabulary </strong> </h2>
 
