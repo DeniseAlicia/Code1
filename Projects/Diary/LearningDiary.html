@@ -10,34 +10,54 @@
 </head>
 
 <body>
-    <h1> What This Is About</h1>
-    <p> This is a personal learning diary for the module Code1 of the GMB course.
-        Each day is going to be documented on here, like my own personal script for the lecture.
-    </p>
+    <section id="about">
+        <h1> What This Is About</h1>
+        <p class="text"> This is a personal learning diary for the module Code1 of the GMB course.
+            Each day is going to be documented on here, like my own personal script for the lecture.
+        </p>
+    </section>
 
     <h2>
         <strong> Day 1 - Getting Started </strong> <br>
         <i> 17.06.2024 </i>
     </h2>
 
-    <p> The first thing is, of course, to set up your coding environment. For that, the following software is needed:</p>
+    <p class="text"> The first thing is, of course, to set up your coding environment. For that, the following software
+        is needed:</p>
 
-    <ul>
+    <ul class="text">
         <li> Visual Studio Code (for the actual coding)</li>
         <li> Git (For better version management)</li>
         <li> Node.js (for executing javascript in a webbrowser)</li>
         <li> Typescript compiler (for compiling typescript)</li>
     </ul>
 
-    <p>A GitHub account is also very useful, since it allows for easier project management with multiple coders involved, as well 
-    as easy repository storage and management.</p>
+    <p class="text">A GitHub account is also very useful, since it allows for easier project management with multiple
+        coders involved, as well
+        as easy repository storage and management. </p>
 
+    <p class="text">
+        This set-up gives you access to a variety of actions to work with and manage your files, even when working with a team:
+    </p>   
     
+    <ul class="text">
+        <li>staging changes</li>
+        <li>commiting changes</li>
+        <li>pull</li>
+        <li>push</li>
+        <li>branches</li>
+        <li>merging branches</li>
+
+    </ul>
 
     <h2>
         <strong> Day 2 - HTML </strong> <br>
         <i> 18.06.2024 </i>
     </h2>
+
+    <p class="text">
+        index files are automatically called when directory is selected
+    </p>
 
     <h2>
         <strong> Day 3 - CSS </strong> <br>
@@ -49,32 +69,35 @@
         <i> 25.06.2024 </i>
     </h2>
 
-    <p> Typescript is essentially a better version of Javascript, that compiles into Javascript.
+    <p class="text"> Typescript is essentially a better version of Javascript, that compiles into Javascript.
         It allows for more strict type management, for example. This means that you have to be more specific
         with defining your variables, but also reduces the chance of errors due to conflicting data types. A typescript
-        file  is compiled into a javascript file, which then can be linked to a html webpage.</p>
+        file is compiled into a javascript file, which then can be linked to a html webpage.</p>
 
-    <p> Linked scripts can change properties of your html page lik texts and color or creating objects and edit
+    <p class="text"> Linked scripts can change properties of your html page lik texts and color or creating objects and
+        edit
         existing ones essentially allowing for <b>DOM-Manipulation</b> outside of the html-file.
     </p>
 
-    <p> Scripts also handle interactions with the page, like clicking on something. These interactions are called
+    <p class="text"> Scripts also handle interactions with the page, like clicking on something. These interactions are
+        called
         <b>events</b>.
     </p>
 
-    <p> For events to be called, an element needs an <b> Event Listener</b> (element.addEventListener("eventType",
+    <p class="text"> For events to be called, an element needs an <b> Event Listener</b>
+        (element.addEventListener("eventType",
         handlerFunction)).
         Those check for events they are assigned to and can call the appropiate function handling the event.
         Some examples of event types are:</p>
 
-    <table style="width:50%">
+    <table class="text" style="width:50%">
         <tr>
             <th> Event Type</th>
             <th> Description</th>
         </tr>
         <tr>
             <td> PointerEvent</td>
-            <td> Interactions with mouse/touchscreen/stylus, e.g. clicking</td>
+            <td> Interactions with mouse/touchscreen/stylus, e.g. clicking.</td>
         </tr>
         <tr>
             <td> KeyboardEvent </td>
@@ -103,30 +126,47 @@
 
     </table>
 
-    <p> Events are also divided int</p>
+    <p class="text"> The process of triggering an event is divided into 3 seperate phases:</p>
 
-    <ul>
+    <ul class="text">
         <li><b> capture phase: </b></li>
         <li><b> target phase:</b></li>
-        <li><b> bubbling phase</b></li>
+        <li><b> bubbling phase:</b></li>
     </ul>
+
+    <h2>
+        <strong> Day 5 - Conception of Applications </strong> <br>
+        <i> 26.06.2024 </i>
+    </h2>
+
+    <p class="text">
+        Once you are ready to develop more complex web applications, you need a plan before starting to code.
+    </p>
 
     <h2><strong> Vocabulary </strong> </h2>
 
-    <table style="width:50%">
+    <table class="text" style="width:50%">
+        <tr>
+            <td> Repository </td>
+            <td> A main directory to store and manage your files</td>
+        </tr>
+        <tr>
+            <td> </td>
+            <td> </td>
+        </tr>
         <tr>
             <td> </td>
             <td> </td>
         </tr>
     </table>
 
-    <h2><strong> Literature & Other Noteworthy Links</strong></h2>
+    <h2><strong> Literature & Other Useful Links</strong></h2>
 
-    <ul>
+    <ul class="text">
         <li> <a href=https://git-scm.com/book/en/v2> Git handbook</a></li>
-        <li> <a href=//jirkadelloro.github.io/EIA2-Inverted/> Inverted classsroom material</a></li>
-        <li>
-            <href< /li>
+        <li> <a href=//jirkadelloro.github.io/EIA2-Inverted /> Inverted classsroom material</a></li>
+        <li> <a href=https://www.w3schools.com /> Reference for web programming languages</li>
+        <li> <a href=https://htmlcolorcodes.com /> Getting hexcodes for colors</li>
     </ul>
 
 </body>
