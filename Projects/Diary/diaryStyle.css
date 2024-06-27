@@ -2,6 +2,7 @@
 
 body {
 
+  background-color: #B9C4C4;
   padding-right: 60px;
   padding-left: 20px;
 }
@@ -26,6 +27,7 @@ td {
 /*space around the tables*/
 table {
   margin: 30px;
+  width: 75%;
 }
 
 /*text style of the page*/
@@ -58,14 +60,12 @@ h2 {
 
 section.fullday {
   width: 100%;
-  background-color: #CCF5F7;
+  background-color: #F4F8DB;
 
   border-color: #3F0E54;
   border: 3px solid;
   border-radius: 20px;
 
   padding: 18px;
-  padding-right:
-  padding-right;
 
 }
