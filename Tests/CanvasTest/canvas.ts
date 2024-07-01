@@ -10,3 +10,5 @@ ctx.fill();
 let path: Path2D = new Path2D();
 path.rect(200,200,50,50);
 ctx.fill(path);
+
+
