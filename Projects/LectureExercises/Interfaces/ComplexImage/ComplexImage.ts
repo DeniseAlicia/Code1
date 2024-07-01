@@ -1,9 +1,9 @@
 
-
+console.log("hello");
 interface Book {
     height: number,
     width: number,
-    color: number,
+    color: string,
     skew: boolean,
 }
 
@@ -40,19 +40,19 @@ let books: Book[] = [];
 
 for (currentRow; currentRow < maxRows; currentRow++) {
     generateBooks();
-    ctx.translate(shelfOffset, rowHeight + shelfOffset);
+    ctx.translate(shelfOffset, rowHeight*currentRow + shelfOffset*currentRow);
     drawBooks(books);
 }
 //generating the books
 function generateBooks(): Book[] {
-    let bookCount: number = Math.floor(Math.random() * 10) + 5
+    let bookCount: number = Math.floor(Math.random() * 10) + 2
 
     for (let i: number = 0; i < bookCount; i++) {
 
         let newBook: Book = {
             height: Math.floor(Math.random() * 140) + 150,
             width: Math.floor(Math.random() * 50) + 50,
-            color: Math.floor(Math.random() * 16777215),
+            color: getRandomColor(),
             skew: randomBoolean(),
         }
 
@@ -67,22 +67,20 @@ function generateBooks(): Book[] {
 function drawBooks(_books: Book[]): void {
 
 
-
-
     for (let t: number = 0; t < _books.length; t++) {
 
         let book: Book = _books[t];
         let path: Path2D = new Path2D();
-        ctx.fillStyle = "#" + String(book.color);
-
-        ctx.translate(shelfOffset, rowHeight + shelfOffset)
+        ctx.fillStyle = book.color;
+        ctx.strokeStyle = "black";
         path.rect(0, 0, book.width, -book.height);
         ctx.fill(path);
+        ctx.stroke(path);
         ctx.translate(book.width, 0);
 
 
     }
-    ctx.translate(0, rowHeight + shelfOffset);
+    ctx.resetTransform();
 }
 
 
@@ -90,7 +88,13 @@ function drawBooks(_books: Book[]): void {
 
 
 
+function getRandomColor(): string {
+    let red: string = String(Math.floor(Math.random()*256));
+    let green: string = String(Math.floor(Math.random()*256));
+    let blue: string = String(Math.floor(Math.random()*256));
 
+    return "rgb("+red+","+green+","+blue+")";
+}
 
 function randomBoolean(): boolean {
     return (Math.floor(Math.random()) >= 0.9);
