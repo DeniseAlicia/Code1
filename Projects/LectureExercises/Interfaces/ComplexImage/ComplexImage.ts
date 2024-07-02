@@ -43,11 +43,12 @@ let maxRows: number = 3;
 let books: Book[] = [];
 let spiders: Spider[] = [];
 
-for (currentRow; currentRow < maxRows+1; currentRow++) {
+//main program
+for (currentRow; currentRow <= maxRows; currentRow++) {
     generateBooks();
     ctx.translate(shelfOffset, rowHeight * currentRow + shelfOffset * currentRow);
     drawBooks(books);
-    books.splice(0, books.length);
+    books.length = 0;
 }
 
 generateSpiders();
