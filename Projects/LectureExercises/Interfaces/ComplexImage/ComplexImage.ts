@@ -37,7 +37,7 @@ shelf.rect(0, canvas.height - (rowHeight + 2 * shelfOffset), canvas.width, shelf
 ctx.stroke(shelf);
 ctx.fill(shelf);
 
-//seetting up some variables
+//setting up some variables
 let currentRow: number = 1;
 let maxRows: number = 3;
 let books: Book[] = [];
