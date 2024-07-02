@@ -57,7 +57,7 @@ drawSpiders(spiders);
 function generateBooks(): void {
 
 
-    let bookCount: number = Math.floor(Math.random() * 10) + 2
+    let bookCount: number = Math.floor(Math.random() * 10) + 5
 
     for (let i: number = 0; i < bookCount; i++) {
 
@@ -65,7 +65,7 @@ function generateBooks(): void {
             height: Math.floor(Math.random() * 90) + 200,
             width: Math.floor(Math.random() * 50) + 50,
             color: getRandomColor(),
-            skew: false//randomBoolean(),
+            skew: randomBoolean(),
         }
 
         books.push(newBook);
@@ -84,17 +84,17 @@ function drawBooks(_books: Book[]): void {
     for (let t: number = 0; t < _books.length; t++) {
 
         let book: Book = _books[t];
-        let nextBook: Book = _books[t + 1];
+        let previousBook: Book = _books[t - 1];
         let path: Path2D = new Path2D();
         ctx.fillStyle = book.color;
 
-        combinedBookWidth = combinedBookWidth + book.width;
+        combinedBookWidth += book.width;
         if (combinedBookWidth >= canvas.width - shelfOffset * 2) {
             break;
         }
 
         if (book.skew == true) {
-            ctx.translate(book.width, 0);
+          
             ctx.rotate(-1 / 8 * Math.PI);
             path.rect(0, 0, book.width, -book.height);
             ctx.fill(path);
