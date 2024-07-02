@@ -5,37 +5,42 @@ const canvas = document.getElementsByTagName("canvas")[0];
 const ctx = canvas.getContext("2d");
 let shelfOffset = 50;
 let rowHeight = 300;
-//drawing the shelf
-let shelf = new Path2D();
-ctx.strokeStyle = "black";
-ctx.fillStyle = "#5b4319";
-ctx.lineWidth = 2;
-shelf.rect(0, 0, shelfOffset, canvas.height);
-shelf.rect(0, 0, canvas.width, shelfOffset);
-shelf.rect(0, canvas.height - shelfOffset, canvas.width, canvas.height);
-shelf.rect(canvas.width - shelfOffset, 0, shelfOffset, canvas.height);
-//drawing the shelf rows
-shelf.rect(0, rowHeight + shelfOffset, canvas.width, shelfOffset);
-shelf.rect(0, canvas.height - (rowHeight + 2 * shelfOffset), canvas.width, shelfOffset);
-ctx.stroke(shelf);
-ctx.fill(shelf);
 //setting up some variables
 let currentRow = 1;
 let maxRows = 3;
-let books = [];
+let shelf = [];
 let spiders = [];
 //main program
+drawShelf();
 for (currentRow; currentRow <= maxRows; currentRow++) {
-    generateBooks();
+    let bookRow = generateBooks();
+    shelf.push(bookRow);
     ctx.translate(shelfOffset, rowHeight * currentRow + shelfOffset * currentRow);
-    drawBooks(books);
-    books.length = 0;
+    drawBooks(bookRow);
 }
 generateSpiders();
 drawSpiders(spiders);
+requestAnimationFrame(animationFrame);
+//setInterval(animationFrame, 40);
+function drawShelf() {
+    let shelf = new Path2D();
+    ctx.strokeStyle = "black";
+    ctx.fillStyle = "#5b4319";
+    ctx.lineWidth = 2;
+    shelf.rect(0, 0, shelfOffset, canvas.height);
+    shelf.rect(0, 0, canvas.width, shelfOffset);
+    shelf.rect(0, canvas.height - shelfOffset, canvas.width, canvas.height);
+    shelf.rect(canvas.width - shelfOffset, 0, shelfOffset, canvas.height);
+    //drawing the shelf rows
+    shelf.rect(0, rowHeight + shelfOffset, canvas.width, shelfOffset);
+    shelf.rect(0, canvas.height - (rowHeight + 2 * shelfOffset), canvas.width, shelfOffset);
+    ctx.stroke(shelf);
+    ctx.fill(shelf);
+}
 //generating the books
 function generateBooks() {
-    let bookCount = Math.floor(Math.random() * 10) + 5;
+    let books = [];
+    let bookCount = Math.floor(Math.random() * 10) + 10;
     for (let i = 0; i < bookCount; i++) {
         let newBook = {
             height: Math.floor(Math.random() * 90) + 200,
@@ -46,42 +51,51 @@ function generateBooks() {
         books.push(newBook);
     }
     console.log(books);
+    return books;
 }
 //drawing the books
 function drawBooks(_books) {
     let combinedBookWidth = 0;
-    for (let t = 0; t < _books.length; t++) {
-        let book = _books[t];
-        let previousBook = _books[t - 1];
+    let previousBookSkewed = false;
+    for (let book of _books) {
         let path = new Path2D();
         ctx.fillStyle = book.color;
+        let skewOffset = 0;
         combinedBookWidth += book.width;
         if (combinedBookWidth >= canvas.width - shelfOffset * 2) {
             break;
         }
         if (book.skew == true) {
+            skewOffset = Math.sin(1 / 8 * Math.PI) * book.height;
+            console.log(skewOffset);
+            if (previousBookSkewed == false) {
+                ctx.translate(skewOffset, 0);
+            }
             ctx.rotate(-1 / 8 * Math.PI);
             path.rect(0, 0, book.width, -book.height);
             ctx.fill(path);
             ctx.stroke(path);
             ctx.rotate(1 / 8 * Math.PI);
+            previousBookSkewed = true;
         }
         else {
             path.rect(0, 0, book.width, -book.height);
             ctx.fill(path);
             ctx.stroke(path);
+            previousBookSkewed = false;
         }
-        ctx.translate(book.width, 0);
+        ctx.translate(book.width + skewOffset, 0);
     }
     ctx.resetTransform();
 }
 function generateSpiders() {
-    let spiderCount = Math.floor(Math.random() * 5) + 1;
+    let spiderCount = Math.floor(Math.random() * 5) + 2;
     for (let s = 0; s < spiderCount; s++) {
         let newSpider = {
             positionX: Math.floor(Math.random() * canvas.width),
             positionY: Math.floor(Math.random() * canvas.height),
             size: Math.floor(Math.random() * 10) + 5,
+            speed: 0.5,
         };
         spiders.push(newSpider);
     }
@@ -103,6 +117,29 @@ function drawSpiders(_spiders) {
         ctx.fill(body);
         ctx.resetTransform();
     }
+}
+function updateSpiders() {
+    for (let i = 0; i < spiders.length; i++) {
+        let speed = spiders[i].speed;
+        spiders[i].positionY += speed;
+        if (spiders[i].positionY >= canvas.height - spiders[i].size * 3) {
+            spiders[i].speed = speed * -1;
+        }
+        else if (spiders[i].positionY < spiders[i].size * 3) {
+            spiders[i].speed = speed * -1;
+        }
+    }
+}
+function animationFrame() {
+    ctx.clearRect(0, 0, canvas.width, canvas.height);
+    drawShelf();
+    for (let i = 0; i < shelf.length; i++) {
+        ctx.translate(shelfOffset, rowHeight + rowHeight * i + shelfOffset + shelfOffset * i);
+        drawBooks(shelf[i]);
+    }
+    updateSpiders();
+    drawSpiders(spiders);
+    requestAnimationFrame(animationFrame);
 }
 function getRandomColor() {
     let red = String(Math.floor(Math.random() * 256));

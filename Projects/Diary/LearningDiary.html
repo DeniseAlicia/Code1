@@ -139,7 +139,7 @@
             Those check for events they are assigned to and can call the appropiate function handling the event.
             Some examples of event types are:</p>
 
-        <table class="text" style="width:50%">
+        <table class="text" style="width:75%">
             <tr>
                 <th> Event Type</th>
                 <th> Description</th>
@@ -218,7 +218,7 @@
             <tr>
                 <td> 3. Activity Diagram</td>
                 <td> A more detailed diagram showcasing the flow of the actual program, including functions and
-                    variables</td>
+                    variables. Different elements have different forms, making it easier to read</td>
             </tr>
         </table>
         usecase diagram, uiscribble, activity diagram (with different bubble forms)
@@ -256,9 +256,38 @@
 
     <section class="fullday">
         <p class="text">
-
+            At ~24 frames per second, the human eye sees a continous motion in an animation. The standard for the game
+            industry
+            nowadays is 60. But how can we tell a program when the next frame is supposed to be drawn? The answer:
+            <strong>
+                time signals </strong>.
         </p>
-        Time signals in javascript
+
+        <p class="text">
+            In Javascript, there are three different kinds of time signals (which all use milliseconds as a unit):
+        </p>
+
+        <p class="text">
+            <strong> setTimeout </strong> <br>
+            setTimeout defines a delay after which a handler function is called. If not called again, it is only
+            executed once.
+        </p>
+        <p class="text">
+            <strong> setInterval </strong> <br>
+            sets an Interval in which the handler funcion is called. Runs continously and outputs an Interval-Id, which
+            can be used by the clearInterval function to stop the interval.
+        </p>
+        <p class="text">
+            <strong>requestAnimation</strong> <br>
+            activates its handler function before the next frame update, allowing for calculations inbetween frames.
+            Needs
+            to be called individually.
+        </p>
+
+        <p class="text">
+            Those time signals can be used to animate with Javascript
+        </p>
+
     </section>
     <h2><strong> Vocabulary </strong> </h2>
 
@@ -274,6 +303,10 @@
         <tr>
             <td> Semantic</td>
             <td> </td>
+        </tr>
+        <tr>
+            <td> Recursion</td>
+            <td> a function that causes itself to be called again</td>
         </tr>
         <tr>
             <td> </td>
