@@ -99,7 +99,8 @@ function drawBooks(_books: Book[]): void {
         let path: Path2D = new Path2D();
         ctx.fillStyle = book.color;
         let skewOffset: number = 0;
-        
+        let moreBooks: boolean = true;
+
 
         combinedBookWidth += book.width;
         if (combinedBookWidth >= canvas.width - shelfOffset * 2) {
@@ -110,9 +111,12 @@ function drawBooks(_books: Book[]): void {
 
             skewOffset = Math.sin(1 / 8 * Math.PI) * book.height;
             console.log(skewOffset);
-            
-            if(previousBookSkewed == false){
-            ctx.translate(skewOffset, 0);
+            if (rowLengthCheck(combinedBookWidth, skewOffset) == true) {
+                break;
+            }
+
+            if (previousBookSkewed == false) {
+                ctx.translate(skewOffset, 0);
             }
 
             ctx.rotate(-1 / 8 * Math.PI);
@@ -126,6 +130,10 @@ function drawBooks(_books: Book[]): void {
 
         }
         else {
+
+            if (rowLengthCheck(combinedBookWidth, skewOffset) == true) {
+                break;
+            }
             path.rect(0, 0, book.width, -book.height);
             ctx.fill(path);
             ctx.stroke(path);
@@ -134,7 +142,7 @@ function drawBooks(_books: Book[]): void {
         }
 
 
-        ctx.translate(book.width + skewOffset, 0);
+        ctx.translate(book.width + 3, 0);
 
 
 
@@ -158,7 +166,7 @@ function generateSpiders(): void {
             positionX: Math.floor(Math.random() * canvas.width),
             positionY: Math.floor(Math.random() * canvas.height),
             size: Math.floor(Math.random() * 10) + 5,
-            speed: 0.5,
+            speed: Math.random() * 0.5 + 0.1,
         }
 
         spiders.push(newSpider);
@@ -224,6 +232,11 @@ function animationFrame() {
 }
 
 
+function rowLengthCheck(_currentLength: number, _skewOffset: number): boolean {
+
+    _currentLength + _skewOffset >= canvas.width - shelfOffset * 2;
+
+}
 
 
 function getRandomColor(): string {

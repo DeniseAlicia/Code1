@@ -61,6 +61,7 @@ function drawBooks(_books) {
         let path = new Path2D();
         ctx.fillStyle = book.color;
         let skewOffset = 0;
+        let moreBooks = true;
         combinedBookWidth += book.width;
         if (combinedBookWidth >= canvas.width - shelfOffset * 2) {
             break;
@@ -68,6 +69,9 @@ function drawBooks(_books) {
         if (book.skew == true) {
             skewOffset = Math.sin(1 / 8 * Math.PI) * book.height;
             console.log(skewOffset);
+            if (rowLengthCheck(combinedBookWidth, skewOffset) == true) {
+                break;
+            }
             if (previousBookSkewed == false) {
                 ctx.translate(skewOffset, 0);
             }
@@ -79,12 +83,15 @@ function drawBooks(_books) {
             previousBookSkewed = true;
         }
         else {
+            if (rowLengthCheck(combinedBookWidth, skewOffset) == true) {
+                break;
+            }
             path.rect(0, 0, book.width, -book.height);
             ctx.fill(path);
             ctx.stroke(path);
             previousBookSkewed = false;
         }
-        ctx.translate(book.width + skewOffset, 0);
+        ctx.translate(book.width + 3, 0);
     }
     ctx.resetTransform();
 }
@@ -95,7 +102,7 @@ function generateSpiders() {
             positionX: Math.floor(Math.random() * canvas.width),
             positionY: Math.floor(Math.random() * canvas.height),
             size: Math.floor(Math.random() * 10) + 5,
-            speed: 0.5,
+            speed: Math.random() * 0.5 + 0.1,
         };
         spiders.push(newSpider);
     }
@@ -140,6 +147,9 @@ function animationFrame() {
     updateSpiders();
     drawSpiders(spiders);
     requestAnimationFrame(animationFrame);
+}
+function rowLengthCheck(_currentLength, _skewOffset) {
+    _currentLength + _skewOffset >= canvas.width - shelfOffset * 2;
 }
 function getRandomColor() {
     let red = String(Math.floor(Math.random() * 256));
