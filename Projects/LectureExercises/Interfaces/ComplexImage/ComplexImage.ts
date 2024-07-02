@@ -50,7 +50,6 @@ for (currentRow; currentRow <= maxRows; currentRow++) {
     drawBooks(books);
     books.length = 0;
 }
-
 generateSpiders();
 drawSpiders(spiders);
 
