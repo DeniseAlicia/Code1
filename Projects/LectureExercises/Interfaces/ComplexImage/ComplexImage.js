@@ -21,7 +21,6 @@ for (currentRow; currentRow <= maxRows; currentRow++) {
 generateSpiders();
 drawSpiders(spiders);
 requestAnimationFrame(animationFrame);
-//setInterval(animationFrame, 40);
 function drawShelf() {
     let shelf = new Path2D();
     ctx.strokeStyle = "black";
@@ -46,7 +45,7 @@ function generateBooks() {
             height: Math.floor(Math.random() * 90) + 200,
             width: Math.floor(Math.random() * 50) + 50,
             color: getRandomColor(),
-            skew: false //randomBoolean(),
+            skew: randomBoolean(),
         };
         books.push(newBook);
     }
@@ -103,7 +102,7 @@ function generateSpiders() {
             positionY: Math.floor(Math.random() * canvas.height),
             size: Math.floor(Math.random() * 10) + 5,
             speed: Math.random() * 0.5 + 0.1,
-            timer: 0,
+            paused: false,
         };
         spiders.push(newSpider);
     }
@@ -118,19 +117,38 @@ function drawSpiders(_spiders) {
         thread.moveTo(0, 0);
         thread.lineTo(0, spider.positionY);
         ctx.stroke(thread);
+        ctx.translate(0, spider.positionY + spider.size);
         let body = new Path2D;
-        body.arc(0, spider.positionY, spider.size, 0, 360);
-        body.moveTo(0, spider.positionY + spider.size);
-        body.lineTo;
-        body.moveTo(0, spider.positionY + spider.size + spider.size / 2);
-        body.arc(0, spider.positionY + spider.size + spider.size / 2, spider.size / 2, 0, 360);
+        let legAngle = 1 / 5 * Math.PI;
+        let legs = new Path2D;
+        body.arc(0, 0, spider.size, 0, 360);
+        body.moveTo(0, 0);
+        for (let i = 0; i < 4; i++) {
+            legs.moveTo(0, 0);
+            ctx.rotate(legAngle);
+            legs.lineTo(0, 2 * spider.size);
+            ctx.stroke(legs);
+        }
+        ctx.resetTransform();
+        ctx.translate(spider.positionX, spider.positionY + spider.size);
+        for (let i = 0; i < 4; i++) {
+            legs.moveTo(0, 0);
+            ctx.rotate(-legAngle);
+            legs.lineTo(0, 2 * spider.size);
+            ctx.stroke(legs);
+        }
+        ctx.resetTransform();
+        ctx.translate(spider.positionX, spider.positionY + spider.size);
+        body.moveTo(0, spider.size / 2);
+        body.arc(0, 1.5 * spider.size, spider.size / 2, 0, 360);
+        ctx.stroke(legs);
         ctx.fill(body);
         ctx.resetTransform();
     }
 }
 function updateSpiders() {
     for (let i = 0; i < spiders.length; i++) {
-        if (spiders[i].timer == 0) {
+        if (spiders[i].paused == false) {
             let speed = spiders[i].speed;
             spiders[i].positionY += speed;
             if (spiders[i].positionY >= canvas.height - spiders[i].size * 3) {
@@ -140,17 +158,7 @@ function updateSpiders() {
                 spiders[i].speed = speed * -1;
             }
         }
-        //spiders[i].timer = spiderPauseTimer(spiders[i].size, spiders[i].timer);
     }
-}
-function spiderPauseTimer(_size, _timer) {
-    if (_timer == 0) {
-        _timer = Math.floor(Math.random() * _size);
-    }
-    else {
-        _timer = _timer - 1;
-    }
-    return _timer;
 }
 function animationFrame() {
     ctx.clearRect(0, 0, canvas.width, canvas.height);
