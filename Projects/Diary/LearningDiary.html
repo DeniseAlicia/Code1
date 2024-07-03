@@ -268,24 +268,27 @@
         </p>
 
         <p class="text">
-            <strong> setTimeout </strong> <br>
+            <strong> setTimeout(handlerFunction, timeout in milliseconds) </strong> <br>
             setTimeout defines a delay after which a handler function is called. If not called again, it is only
             executed once.
         </p>
         <p class="text">
-            <strong> setInterval </strong> <br>
+            <strong> setInterval(handlerFunction, interval in milliseconds) </strong> <br>
             sets an Interval in which the handler funcion is called. Runs continously and outputs an Interval-Id, which
             can be used by the clearInterval function to stop the interval.
         </p>
         <p class="text">
-            <strong>requestAnimation</strong> <br>
+            <strong>requestAnimation(handlerFunction)</strong> <br>
             activates its handler function before the next frame update, allowing for calculations inbetween frames.
             Needs
             to be called individually.
         </p>
 
         <p class="text">
-            Those time signals can be used to animate with Javascript
+            Those time signals can be used to animate with Javascript. By giving the program a function to "update" the images
+            on screen (usually by changing the position values of some objects) and calling that function at set intervals (via
+            one of the time signal functiions above) you can give the illusion of movement. <br>
+            For an example, see <a href ""
         </p>
 
     </section>
