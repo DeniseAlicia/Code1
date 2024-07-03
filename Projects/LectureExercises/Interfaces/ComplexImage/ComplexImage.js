@@ -46,7 +46,7 @@ function generateBooks() {
             height: Math.floor(Math.random() * 90) + 200,
             width: Math.floor(Math.random() * 50) + 50,
             color: getRandomColor(),
-            skew: randomBoolean(),
+            skew: false //randomBoolean(),
         };
         books.push(newBook);
     }
@@ -62,7 +62,7 @@ function drawBooks(_books) {
         ctx.fillStyle = book.color;
         let skewOffset = 0;
         let moreBooks = true;
-        combinedBookWidth += book.width;
+        combinedBookWidth += book.width + 3;
         if (combinedBookWidth >= canvas.width - shelfOffset * 2) {
             break;
         }
@@ -103,6 +103,7 @@ function generateSpiders() {
             positionY: Math.floor(Math.random() * canvas.height),
             size: Math.floor(Math.random() * 10) + 5,
             speed: Math.random() * 0.5 + 0.1,
+            timer: 0,
         };
         spiders.push(newSpider);
     }
@@ -119,6 +120,8 @@ function drawSpiders(_spiders) {
         ctx.stroke(thread);
         let body = new Path2D;
         body.arc(0, spider.positionY, spider.size, 0, 360);
+        body.moveTo(0, spider.positionY + spider.size);
+        body.lineTo;
         body.moveTo(0, spider.positionY + spider.size + spider.size / 2);
         body.arc(0, spider.positionY + spider.size + spider.size / 2, spider.size / 2, 0, 360);
         ctx.fill(body);
@@ -127,15 +130,27 @@ function drawSpiders(_spiders) {
 }
 function updateSpiders() {
     for (let i = 0; i < spiders.length; i++) {
-        let speed = spiders[i].speed;
-        spiders[i].positionY += speed;
-        if (spiders[i].positionY >= canvas.height - spiders[i].size * 3) {
-            spiders[i].speed = speed * -1;
+        if (spiders[i].timer == 0) {
+            let speed = spiders[i].speed;
+            spiders[i].positionY += speed;
+            if (spiders[i].positionY >= canvas.height - spiders[i].size * 3) {
+                spiders[i].speed = speed * -1;
+            }
+            else if (spiders[i].positionY < spiders[i].size * 3) {
+                spiders[i].speed = speed * -1;
+            }
         }
-        else if (spiders[i].positionY < spiders[i].size * 3) {
-            spiders[i].speed = speed * -1;
-        }
+        //spiders[i].timer = spiderPauseTimer(spiders[i].size, spiders[i].timer);
     }
+}
+function spiderPauseTimer(_size, _timer) {
+    if (_timer == 0) {
+        _timer = Math.floor(Math.random() * _size);
+    }
+    else {
+        _timer = _timer - 1;
+    }
+    return _timer;
 }
 function animationFrame() {
     ctx.clearRect(0, 0, canvas.width, canvas.height);
@@ -149,8 +164,9 @@ function animationFrame() {
     requestAnimationFrame(animationFrame);
 }
 function rowLengthCheck(_currentLength, _skewOffset) {
-    _currentLength + _skewOffset >= canvas.width - shelfOffset * 2;
+    return _currentLength + _skewOffset >= canvas.width - shelfOffset * 2 + 250;
 }
+//function calculateOffset(): number {
 function getRandomColor() {
     let red = String(Math.floor(Math.random() * 256));
     let green = String(Math.floor(Math.random() * 256));

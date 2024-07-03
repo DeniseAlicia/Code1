@@ -77,7 +77,7 @@ function generateBooks(): Book[] {
             height: Math.floor(Math.random() * 90) + 200,
             width: Math.floor(Math.random() * 50) + 50,
             color: getRandomColor(),
-            skew: false //randomBoolean(),
+            skew:  false //randomBoolean(),
         }
 
         books.push(newBook);
@@ -221,7 +221,7 @@ function updateSpiders() {
             }
         }
 
-        spiders[i].timer = spiderPauseTimer(spiders[i].size, spiders[i].timer);
+        //spiders[i].timer = spiderPauseTimer(spiders[i].size, spiders[i].timer);
 
     }
 }
