@@ -76,7 +76,7 @@ function generateBooks(): Book[] {
             height: Math.floor(Math.random() * 90) + 200,
             width: Math.floor(Math.random() * 50) + 50,
             color: getRandomColor(),
-            skew: randomBoolean(),
+            skew: false //randomBoolean(),
         }
 
         books.push(newBook);
@@ -256,7 +256,7 @@ function updateSpiders() {
 }
 
 
-function animationFrame() {
+function animationFrame():void {
 
     ctx.clearRect(0, 0, canvas.width, canvas.height);
 

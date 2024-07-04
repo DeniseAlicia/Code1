@@ -45,7 +45,7 @@ function generateBooks() {
             height: Math.floor(Math.random() * 90) + 200,
             width: Math.floor(Math.random() * 50) + 50,
             color: getRandomColor(),
-            skew: randomBoolean(),
+            skew: false //randomBoolean(),
         };
         books.push(newBook);
     }
